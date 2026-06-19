@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 13, 13, 13;
+  --background-end-rgb: 13, 13, 13;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* App like feel */
+}
+
+/* Glassmorphic utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.orb-pulse {
+  animation: pulse-orb 2s infinite ease-in-out;
+}
+
+@keyframes pulse-orb {
+  0% { transform: scale(1); box-shadow: 0 0 15px rgba(0, 217, 255, 0.4); }
+  50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(0, 217, 255, 0.8); }
+  100% { transform: scale(1); box-shadow: 0 0 15px rgba(0, 217, 255, 0.4); }
+}
